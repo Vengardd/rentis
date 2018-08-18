@@ -1,0 +1,1 @@
+INSERT INTO Car (brand, model, generation) VALUES ('aa','aa','aa' )
