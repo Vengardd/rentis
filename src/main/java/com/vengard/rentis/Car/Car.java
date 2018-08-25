@@ -1,12 +1,15 @@
 package com.vengard.rentis.Car;
 
+import org.springframework.lang.Nullable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotEmpty;
+import java.util.Date;
 
-@Entity
+@Entity(name = "CAR")
 public class Car {
 
     @Id
@@ -20,43 +23,73 @@ public class Car {
     @NotEmpty
     private String generation;
 
-    private Integer yearProduction;
+    private Integer yearbook;
+
+    @Nullable
+    private Date dateReturn;
 
     @NotEmpty
-    private Boolean isAvaible;
+    private Boolean isAvailable;
 
     public Car() {
     }
 
-    public Car(@NotEmpty String brand, @NotEmpty String model, @NotEmpty String generation, Integer yearProduction, @NotEmpty Boolean isAvaible) {
+    public Car(@NotEmpty String brand, @NotEmpty String model, @NotEmpty String generation, Integer yearbook, @NotEmpty Boolean isAvailable) {
         this.brand = brand;
         this.model = model;
         this.generation = generation;
-        this.yearProduction = yearProduction;
-        this.isAvaible = isAvaible;
+        this.yearbook = yearbook;
+        this.isAvailable = isAvailable;
     }
 
     public Long getId() {
         return id;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public String getBrand() {
         return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 
     public String getModel() {
         return model;
     }
 
+    public void setModel(String model) {
+        this.model = model;
+    }
+
     public String getGeneration() {
         return generation;
     }
 
-    public Integer getYearProduction() {
-        return yearProduction;
+    public void setGeneration(String generation) {
+        this.generation = generation;
     }
 
-    public Boolean getAvaible() {
-        return isAvaible;
+    public Integer getYearbook() {
+        return yearbook;
     }
+
+    public void setYearbook(Integer yearbook) {
+        this.yearbook = yearbook;
+    }
+
+    public Boolean isAvailable() {
+        return isAvailable;
+    }
+
+    public void setAvailable(boolean available) {
+        this.isAvailable = available;
+    }
+
+
+
 }

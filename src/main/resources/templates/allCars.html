@@ -8,9 +8,12 @@
 <body>
  <th:block th:each="car : ${cars}">
      <tr>
+         <td th:text="${car.id}">...</td>
          <td th:text="${car.brand}">...</td>
          <td th:text="${car.model}">...</td>
+        <br>
      </tr>
  </th:block>
+
 </body>
 </html>

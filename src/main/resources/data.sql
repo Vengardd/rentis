@@ -1,1 +1,1 @@
-INSERT INTO Car (brand, model, generation) VALUES ('aa','aa','aa' )
+INSERT INTO car (brand, model, generation, yearbook) VALUES ('aa','aa' ,'aa', 1900)
