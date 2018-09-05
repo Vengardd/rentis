@@ -8,7 +8,7 @@ import java.util.List;
 @Repository
 public interface CarRepository extends CrudRepository<Car, Long>{
 
-    List findAll();
+    List<Car> findAll();
     Car save(Car car);
     void deleteById(Long id);
 

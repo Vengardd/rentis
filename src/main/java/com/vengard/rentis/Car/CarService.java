@@ -23,23 +23,23 @@ public class CarService {
         return carRepository.findById(id).orElse(null);
     }
 
-    public Car findAvaibleById(Long id) {
-        return carRepository.findById(id)
-                .filter(Car::isAvailable)
-                .orElseThrow(() -> new RuntimeException());
-    }
-
-    public Car setAvailability(Car oldCar, boolean availability) {
-        Car newCar = carRepository.findById(oldCar.getId()).orElse(null);
-        if (newCar == null)
-            throw new RuntimeException();
-        newCar.setAvailable(availability);
-        swapCar(oldCar, newCar);
-        return newCar;
-    }
-
-    private void swapCar(Car oldCar, Car newCar) {
-        carRepository.deleteById(oldCar.getId());
-        carRepository.save(newCar);
-    }
+//    public Car findAvaibleById(Long id) {
+//        return carRepository.findById(id)
+//                .filter(Car::isAvailable)
+//                .orElseThrow(() -> new RuntimeException());
+//    }
+//
+//    public Car setAvailability(Car oldCar, boolean availability) {
+//        Car newCar = carRepository.findById(oldCar.getId()).orElse(null);
+//        if (newCar == null)
+//            throw new RuntimeException();
+//        newCar.setAvailable(availability);
+//        swapCar(oldCar, newCar);
+//        return newCar;
+//    }
+//
+//    private void swapCar(Car oldCar, Car newCar) {
+//        carRepository.deleteById(oldCar.getId());
+//        carRepository.save(newCar);
+//    }
 }

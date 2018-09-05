@@ -23,23 +23,4 @@ public class RentController {
         rentService.rentCar(rentCarPostObject);
         return null;
     }
-
-//    //ToDo refactor
-//    @PostMapping("/rent")
-//    public RentHistory rentCar2(@RequestBody Map<String, Object> objects, @ModelAttribute RentHistory rentHistory) {
-//        int i = (Integer)objects.get("id");
-//        Long l = new Long(i);
-//        Date dateRent = null;
-//        Date plannedDateReturn = null;
-//        try {
-//            dateRent = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSX").parse((String) objects.get("dateRent"));
-//            plannedDateReturn = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSX").parse((String) objects.get("plannedDateReturn"));
-//        }
-//        catch(Exception e) {
-//            return null;
-//        }
-////        return rentHistoryService.addRentHistory(new RentHistory(carService.findById(l), new Date(), dateRent, plannedDateReturn));
-//        return null;
-//    }
-
 }

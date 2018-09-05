@@ -28,18 +28,14 @@ public class Car {
     @Nullable
     private Date dateReturn;
 
-    @NotEmpty
-    private Boolean isAvailable;
-
     public Car() {
     }
 
-    public Car(@NotEmpty String brand, @NotEmpty String model, @NotEmpty String generation, Integer yearbook, @NotEmpty Boolean isAvailable) {
+    public Car(@NotEmpty String brand, @NotEmpty String model, @NotEmpty String generation, Integer yearbook) {
         this.brand = brand;
         this.model = model;
         this.generation = generation;
         this.yearbook = yearbook;
-        this.isAvailable = isAvailable;
     }
 
     public Long getId() {
@@ -81,15 +77,5 @@ public class Car {
     public void setYearbook(Integer yearbook) {
         this.yearbook = yearbook;
     }
-
-    public Boolean isAvailable() {
-        return isAvailable;
-    }
-
-    public void setAvailable(boolean available) {
-        this.isAvailable = available;
-    }
-
-
 
 }
