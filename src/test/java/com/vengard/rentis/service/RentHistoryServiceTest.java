@@ -1,12 +1,10 @@
 package com.vengard.rentis.service;
 
 
-import com.vengard.rentis.Car.Car;
-import com.vengard.rentis.Car.CarRepository;
-import com.vengard.rentis.RentHistory.RentHistory;
-import com.vengard.rentis.RentHistory.RentHistoryBuilder;
-import com.vengard.rentis.RentHistory.RentHistoryRepository;
-import com.vengard.rentis.RentHistory.RentHistoryService;
+import com.vengard.rentis.model.Car;
+import com.vengard.rentis.repository.CarRepository;
+import com.vengard.rentis.model.RentHistory;
+import com.vengard.rentis.repository.RentHistoryRepository;
 import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.runner.RunWith;
@@ -14,7 +12,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.mockito.junit.MockitoJUnitRunner;
-import org.springframework.boot.test.mock.mockito.MockBean;
 
 import java.util.Optional;
 
@@ -56,10 +53,5 @@ public class RentHistoryServiceTest {
         assertNotNull(result.getCar());
 
         verify(carRepository).save(any());
-
     }
-
-
-
-
 }

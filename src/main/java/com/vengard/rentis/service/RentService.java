@@ -1,9 +1,8 @@
-package com.vengard.rentis.Rent;
+package com.vengard.rentis.service;
 
-import com.vengard.rentis.Car.Car;
-import com.vengard.rentis.Car.CarService;
-import com.vengard.rentis.RentHistory.RentHistory;
-import com.vengard.rentis.RentHistory.RentHistoryService;
+import com.vengard.rentis.model.Car;
+import com.vengard.rentis.model.RentHistory;
+import com.vengard.rentis.model.RentCarPostObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

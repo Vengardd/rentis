@@ -1,14 +1,14 @@
-package com.vengard.rentis.RentHistory;
+package com.vengard.rentis.service;
 
-import com.vengard.rentis.Car.Car;
-import com.vengard.rentis.Car.CarService;
-import com.vengard.rentis.Rent.RentCarPostObject;
+import com.vengard.rentis.model.builder.RentHistoryBuilder;
+import com.vengard.rentis.model.Car;
+import com.vengard.rentis.model.RentCarPostObject;
+import com.vengard.rentis.model.RentHistory;
+import com.vengard.rentis.repository.RentHistoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.sql.Timestamp;
-import java.time.ZoneId;
-import java.util.Date;
 import java.util.List;
 
 @Service

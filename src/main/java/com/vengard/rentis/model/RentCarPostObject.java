@@ -1,6 +1,4 @@
-package com.vengard.rentis.Rent;
-
-import com.vengard.rentis.RentHistory.RentHistory;
+package com.vengard.rentis.model;
 
 import java.sql.Timestamp;
 

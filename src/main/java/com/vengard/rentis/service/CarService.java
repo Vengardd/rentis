@@ -1,5 +1,7 @@
-package com.vengard.rentis.Car;
+package com.vengard.rentis.service;
 
+import com.vengard.rentis.model.Car;
+import com.vengard.rentis.repository.CarRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

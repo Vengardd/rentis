@@ -1,13 +1,13 @@
-package com.vengard.rentis.Car;
+package com.vengard.rentis.controller;
 
+import com.vengard.rentis.service.CarService;
+import com.vengard.rentis.model.Car;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.sql.Timestamp;
-import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController

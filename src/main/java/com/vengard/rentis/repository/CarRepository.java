@@ -1,5 +1,6 @@
-package com.vengard.rentis.Car;
+package com.vengard.rentis.repository;
 
+import com.vengard.rentis.model.Car;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,4 +1,4 @@
-package com.vengard.rentis.Car;
+package com.vengard.rentis.model;
 
 import org.springframework.lang.Nullable;
 

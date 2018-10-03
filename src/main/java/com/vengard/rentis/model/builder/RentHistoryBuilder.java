@@ -1,6 +1,7 @@
-package com.vengard.rentis.RentHistory;
+package com.vengard.rentis.model.builder;
 
-import com.vengard.rentis.Car.Car;
+import com.vengard.rentis.model.Car;
+import com.vengard.rentis.model.RentHistory;
 
 import java.sql.Timestamp;
 

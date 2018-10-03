@@ -1,8 +1,8 @@
-package com.vengard.rentis.RentHistory;
+package com.vengard.rentis.validator;
+
+import com.vengard.rentis.model.RentHistory;
 
 import java.sql.Timestamp;
-import java.time.LocalDateTime;
-import java.util.Calendar;
 import java.util.Date;
 
 public class RentHistoryValidator {

@@ -1,6 +1,6 @@
-package com.vengard.rentis.RentHistory;
+package com.vengard.rentis.model;
 
-import com.vengard.rentis.Car.Car;
+import com.vengard.rentis.model.Car;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
