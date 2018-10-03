@@ -6,10 +6,12 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface CarRepository extends CrudRepository<Car, Long>{
+public interface CarRepository extends CrudRepository<Car, Long> {
 
     List<Car> findAll();
+
     Car save(Car car);
+
     void deleteById(Long id);
 
 }

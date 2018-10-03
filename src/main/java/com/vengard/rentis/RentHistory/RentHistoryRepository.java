@@ -13,7 +13,7 @@ public interface RentHistoryRepository extends CrudRepository<RentHistory, Long>
 
     RentHistory save(RentHistory rentHistory);
 
-    @Query(value = "SELECT * FROM RENT_HISTORY WHERE CAR = ?1 AND DATE_RENT <= ?2", nativeQuery = true)
+    @Query(value = "SELECT * FROM RENT_HISTORY WHERE CAR = ?1 AND (DATE_RENT >= ?2 OR PLANNED_DATE_RETURN >= ?2)", nativeQuery = true)
     List<RentHistory> findAllByCarAndDateRentIsAfter(@Param("car") Car car, @Param("date") Timestamp date);
 
 }

@@ -7,9 +7,7 @@ import com.vengard.rentis.RentHistory.RentHistoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.sql.Time;
 import java.sql.Timestamp;
-import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -23,8 +21,7 @@ public class RentService {
     private RentHistoryService rentHistoryService;
 
     public RentHistory rentCar(RentCarPostObject rentCarPostObject) {
-        rentHistoryService.addRentHistory(rentCarPostObject);
-        return null;
+        return rentHistoryService.addRentHistory(rentCarPostObject);
     }
 
     public List<List<Timestamp>> getNotAvailableTerms(Long id) {

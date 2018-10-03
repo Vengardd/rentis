@@ -20,7 +20,6 @@ public class RentController {
 
     @PostMapping("/rent")
     public RentHistory rentCar(@RequestBody RentCarPostObject rentCarPostObject) {
-        rentService.rentCar(rentCarPostObject);
-        return null;
+        return rentService.rentCar(rentCarPostObject);
     }
 }

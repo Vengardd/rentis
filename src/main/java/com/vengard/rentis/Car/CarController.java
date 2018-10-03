@@ -26,8 +26,4 @@ public class CarController {
         return carService.addCar(car);
     }
 
-    @GetMapping("/date")
-    public Timestamp aa() {
-        return new Timestamp(5);
-    }
 }

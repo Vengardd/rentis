@@ -13,8 +13,8 @@ public class RentCarPostObject {
     public RentCarPostObject() {
     }
 
-    public RentCarPostObject(Long carId, Timestamp dateRent, Timestamp plannedDateReturn) {
-        this.carId = carId;
+    public RentCarPostObject(String carId, Timestamp dateRent, Timestamp plannedDateReturn) {
+        this.carId = Long.valueOf(carId);
         this.dateRent = dateRent;
         this.plannedDateReturn = plannedDateReturn;
     }
