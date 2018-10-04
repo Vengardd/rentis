@@ -2,6 +2,7 @@ package com.vengard.rentis.model;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -17,7 +18,7 @@ public class User {
     private String email;
 
     @ManyToMany
-    private List<UserRole> roles;
+    private List<UserRole> roles = new ArrayList<>();
 
     @OneToMany
     private List<RentHistory> rentHistories;
