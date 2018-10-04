@@ -18,6 +18,10 @@ public class RentHistory {
     @JoinColumn(name = "Car")
     private Car car;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "User")
+    private User lender;
+
     private Timestamp dateOrder;
     private Timestamp dateRent;
     private Timestamp plannedDateReturn;
