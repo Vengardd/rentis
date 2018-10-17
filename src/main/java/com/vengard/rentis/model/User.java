@@ -2,8 +2,6 @@ package com.vengard.rentis.model;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 public class User {
@@ -17,21 +15,17 @@ public class User {
     @Email
     private String email;
 
-    @ManyToMany
-    private List<UserRole> roles = new ArrayList<>();
-
-    @OneToMany
-    private List<RentHistory> rentHistories;
+    @ManyToOne
+    private UserRole role;
 
     public User() {
     }
 
-    public User(String username, String password, @Email String email, List<UserRole> roles, List<RentHistory> rentHistories) {
+    public User(String username, String password, @Email String email, UserRole role) {
         this.username = username;
         this.password = password;
         this.email = email;
-        this.roles = roles;
-        this.rentHistories = rentHistories;
+        this.role = role;
     }
 
     public Long getId() {
@@ -66,19 +60,11 @@ public class User {
         this.email = email;
     }
 
-    public List<UserRole> getRoles() {
-        return roles;
+    public UserRole getRole() {
+        return role;
     }
 
-    public void setRoles(List<UserRole> roles) {
-        this.roles = roles;
-    }
-
-    public List<RentHistory> getRentHistories() {
-        return rentHistories;
-    }
-
-    public void setRentHistories(List<RentHistory> rentHistories) {
-        this.rentHistories = rentHistories;
+    public void setRole(UserRole role) {
+        this.role = role;
     }
 }

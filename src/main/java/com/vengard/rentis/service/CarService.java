@@ -1,11 +1,14 @@
 package com.vengard.rentis.service;
 
+import com.vengard.rentis.exception.CarNotFoundException;
 import com.vengard.rentis.model.Car;
-import com.vengard.rentis.repository.CarRepository;
+import com.vengard.rentis.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.swing.text.html.Option;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CarService {
@@ -20,28 +23,8 @@ public class CarService {
     public Car addCar(Car car) {
         return carRepository.save(car);
     }
-
-    public Car findById(Long id) {
-        return carRepository.findById(id).orElse(null);
+    public Car findById(Long id) throws CarNotFoundException{
+        return carRepository.findById(id).orElseThrow(CarNotFoundException::new);
     }
 
-//    public Car findAvaibleById(Long id) {
-//        return carRepository.findById(id)
-//                .filter(Car::isAvailable)
-//                .orElseThrow(() -> new RuntimeException());
-//    }
-//
-//    public Car setAvailability(Car oldCar, boolean availability) {
-//        Car newCar = carRepository.findById(oldCar.getId()).orElse(null);
-//        if (newCar == null)
-//            throw new RuntimeException();
-//        newCar.setAvailable(availability);
-//        swapCar(oldCar, newCar);
-//        return newCar;
-//    }
-//
-//    private void swapCar(Car oldCar, Car newCar) {
-//        carRepository.deleteById(oldCar.getId());
-//        carRepository.save(newCar);
-//    }
 }

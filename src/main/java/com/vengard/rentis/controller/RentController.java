@@ -1,5 +1,6 @@
 package com.vengard.rentis.controller;
 
+import com.vengard.rentis.exception.CarNotFoundException;
 import com.vengard.rentis.service.RentService;
 import com.vengard.rentis.model.RentHistory;
 import com.vengard.rentis.model.RentCarPostObject;
@@ -16,12 +17,12 @@ public class RentController {
     RentService rentService;
 
     @GetMapping("/rent/{id}")
-    public List<List<Timestamp>> notAvailableTerms(@PathVariable("id") Long id) {
+    public List<List<Timestamp>> notAvailableTerms(@PathVariable("id") Long id) throws CarNotFoundException{
         return rentService.getNotAvailableTerms(id);
     }
 
     @PostMapping("/rent")
-    public RentHistory rentCar(@RequestBody RentCarPostObject rentCarPostObject) {
+    public RentHistory rentCar(@RequestBody RentCarPostObject rentCarPostObject) throws CarNotFoundException{
         return rentService.rentCar(rentCarPostObject);
     }
 }
