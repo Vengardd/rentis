@@ -25,4 +25,9 @@ public class RentController {
     public RentHistory rentCar(@RequestBody RentCarPostObject rentCarPostObject) throws CarNotFoundException{
         return rentService.rentCar(rentCarPostObject);
     }
+
+    @GetMapping("/rent/cost")
+    public Float countRentCost(@RequestBody RentCarPostObject rentCarPostObject) {
+        return rentService.countRentCost(rentCarPostObject);
+    }
 }

@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import java.sql.Timestamp;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 @Service
 public class RentService {
@@ -24,7 +25,6 @@ public class RentService {
         return rentHistoryService.addRentHistory(rentCarPostObject);
     }
 
-
     public List<List<Timestamp>> getNotAvailableTerms(Long id) throws CarNotFoundException {
         Car car = carService.findById(id);
         List<List<Timestamp>> list = new LinkedList<>();
@@ -36,5 +36,9 @@ public class RentService {
                     list.add(timestamps);
                 });
         return list;
+    }
+
+    public Float countRentCost(RentCarPostObject rentCarPostObject) {
+        return 5f;
     }
 }
