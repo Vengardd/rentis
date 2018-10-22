@@ -1,6 +1,6 @@
 package com.vengard.rentis.exception;
 
-public class CarNotFoundException extends Exception{
+public class CarNotFoundException extends RuntimeException{
 
     @Override
     public String getMessage() {

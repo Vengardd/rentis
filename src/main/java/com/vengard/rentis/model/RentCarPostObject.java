@@ -7,6 +7,7 @@ public class RentCarPostObject {
     private Long carId;
     private Timestamp dateRent;
     private Timestamp plannedDateReturn;
+    private UserRole userRole;
 
     public RentCarPostObject() {
     }
@@ -15,6 +16,14 @@ public class RentCarPostObject {
         this.carId = Long.valueOf(carId);
         this.dateRent = dateRent;
         this.plannedDateReturn = plannedDateReturn;
+    }
+
+    public UserRole getUserRole() {
+        return userRole;
+    }
+
+    public void setUserRole(UserRole userRole) {
+        this.userRole = userRole;
     }
 
     public Long getCarId() {

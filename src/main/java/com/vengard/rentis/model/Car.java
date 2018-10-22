@@ -1,6 +1,5 @@
 package com.vengard.rentis.model;
 
-import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.Entity;
@@ -8,7 +7,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotEmpty;
-import java.util.Date;
 
 @Component
 @Entity(name = "CAR")
@@ -21,11 +19,9 @@ public class Car {
     private String brand;
     private String model;
     private String generation;
-
     private Integer yearbook;
 
-    @Nullable
-    private Date dateReturn;
+    private Long costPerDay;
 
     public Car() {
     }
@@ -35,6 +31,14 @@ public class Car {
         this.model = model;
         this.generation = generation;
         this.yearbook = yearbook;
+    }
+
+    public Long getCostPerDay() {
+        return costPerDay;
+    }
+
+    public void setCostPerDay(Long costPerDay) {
+        this.costPerDay = costPerDay;
     }
 
     public Long getId() {
